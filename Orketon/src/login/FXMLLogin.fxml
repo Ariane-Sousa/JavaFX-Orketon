@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.FXMLLoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.FXMLLoginController">
    <left>
       <AnchorPane style="-fx-background-color: #3E0034;" BorderPane.alignment="CENTER">
          <children>
@@ -41,19 +41,19 @@
                         <Font name="Serif Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="54.0" layoutY="156.0" prefHeight="26.0" prefWidth="69.0" style="-fx-font-family: Lato;" text="Usuário" textFill="#574d4d">
+                  <Label layoutX="54.0" layoutY="156.0" prefHeight="26.0" prefWidth="69.0" style="-fx-font-family: Lato;" text="E-mail" textFill="#574d4d">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="53.0" layoutY="182.0" prefHeight="30.0" prefWidth="355.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="tfEmail" layoutX="53.0" layoutY="182.0" prefHeight="30.0" prefWidth="355.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="33.0" layoutY="254.0" prefHeight="26.0" prefWidth="293.0" style="-fx-font-family: Lato;" textFill="#574d4d">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <PasswordField layoutX="52.0" layoutY="252.0" prefHeight="30.0" prefWidth="357.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-width: 0px 0px 2px 0px;" />
-                  <Button layoutX="58.0" layoutY="347.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: bold;" text="Entrar" textFill="WHITE" />
+                  <PasswordField fx:id="pwSenha" layoutX="52.0" layoutY="252.0" prefHeight="30.0" prefWidth="357.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button layoutX="58.0" layoutY="347.0" mnemonicParsing="false" onAction="#entrar" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: bold;" text="Entrar" textFill="WHITE" />
                   <Label layoutX="76.0" layoutY="467.0" prefHeight="26.0" prefWidth="111.0" style="-fx-font-family: Lato;" text="Novo usuário?" textFill="#574d4d">
                      <font>
                         <Font size="17.0" />
@@ -65,7 +65,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="erroMessage" layoutX="52.0" layoutY="295.0" prefHeight="26.0" prefWidth="359.0" style="-fx-font-family: Lato;" textFill="#574d4d">
+                  <Label fx:id="mensagemErro" layoutX="52.0" layoutY="295.0" prefHeight="26.0" prefWidth="359.0" style="-fx-font-family: Lato;" textFill="RED">
                      <font>
                         <Font size="15.0" />
                      </font>

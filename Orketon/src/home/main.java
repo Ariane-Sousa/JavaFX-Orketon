@@ -5,11 +5,9 @@
 package home;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -17,14 +15,13 @@ import javafx.stage.StageStyle;
  *
  * @author Ariane Sousa
  */
-public class Orketon extends Application {
-   
-    
+public class Main extends Application {
+  
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLLogin.fxml")); 
+        Parent root = FXMLLoader.load(getClass().getResource("/login/FXMLLogin.fxml")); 
         Scene scene = new Scene(root);
-        stage.initStyle(StageStyle.DECORATED.UNDECORATED); 
+        stage.initStyle(StageStyle.DECORATED); 
         stage.setScene(scene);
         stage.show(); 
     }
