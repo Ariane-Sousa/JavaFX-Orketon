@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
- */
 package login;
 
 import conexao.Conexao;
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,20 +13,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Ariane Sousa
- */
+
 public class FXMLLoginController implements Initializable {
     
     @FXML private TextField tfEmail;
     @FXML private PasswordField pwSenha;
     @FXML private Label mensagemErro;
+    @FXML private Button maximizar;
     
     @FXML
     private void fechar(ActionEvent event){
@@ -54,7 +50,7 @@ public class FXMLLoginController implements Initializable {
                     Node node = (Node) event.getSource();
                     Stage stage = (Stage) node.getScene().getWindow();
                     stage.close();
-                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml.home/FXMLHome.fxml")));
+                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/home/Home.fxml")));
                     stage.setScene(scene);
                     stage.show();
                 } else {
@@ -64,9 +60,8 @@ public class FXMLLoginController implements Initializable {
                 System.out.println("Erro:" + e);
             }
         }
-        
     }
-    
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
