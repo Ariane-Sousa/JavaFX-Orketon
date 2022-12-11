@@ -35,7 +35,61 @@
    <right>
       <AnchorPane fx:id="criaContaPasso1" prefHeight="700.0" prefWidth="740.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="criaConta" prefHeight="700.0" prefWidth="674.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="cadastro" prefHeight="700.0" prefWidth="674.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="75.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="165.0" prefHeight="66.0" prefWidth="205.0" style="-fx-font-family: Noto Sans KR;" text="Cadastro" textAlignment="CENTER" textFill="#3e0034">
+                           <font>
+                              <Font name="Serif Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="66.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="Nome completo" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNome" layoutX="41.0" layoutY="101.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <PasswordField fx:id="pwSenha" layoutX="41.0" layoutY="328.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <Button fx:id="proximoPasso" layoutX="73.0" layoutY="512.0" mnemonicParsing="false" onAction="#passosCriaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Próximo" textFill="WHITE" />
+                        <Label layoutX="41.0" layoutY="293.0" prefHeight="35.0" prefWidth="69.0" style="-fx-font-family: Lato;" text="Senha" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="mensagemErro" layoutX="36.0" layoutY="462.0" prefHeight="26.0" prefWidth="423.0" style="-fx-font-family: Lato;" textFill="RED">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="140.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="E-mail" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfEmail" layoutX="41.0" layoutY="175.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <Label layoutX="41.0" layoutY="216.0" prefHeight="35.0" prefWidth="207.0" style="-fx-font-family: Lato;" text="Confirmação do E-mail" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfConfirmaEmail" layoutX="41.0" layoutY="251.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <Label layoutX="41.0" layoutY="374.0" prefHeight="35.0" prefWidth="195.0" style="-fx-font-family: Lato;" text="Confirmação da Senha" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="pwConfirmaSenha" layoutX="41.0" layoutY="409.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="criaConta" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: white;">
                <children>
                   <Pane layoutX="75.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
                      <children>
@@ -70,61 +124,7 @@
                         <DatePicker fx:id="dpDataNascimento" layoutX="40.0" layoutY="198.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8;" />
                      </children>
                   </Pane>
-                  <Button fx:id="fechar1" alignment="TOP_RIGHT" layoutX="614.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
-                     <font>
-                        <Font name="System Bold" size="30.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="cadastro" prefHeight="700.0" prefWidth="674.0" style="-fx-background-color: white;">
-               <children>
-                  <Pane layoutX="75.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
-                     <children>
-                        <Label layoutX="165.0" prefHeight="66.0" prefWidth="205.0" style="-fx-font-family: Noto Sans KR;" text="Cadastro" textAlignment="CENTER" textFill="#3e0034">
-                           <font>
-                              <Font name="Serif Bold" size="45.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="41.0" layoutY="66.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="Nome completo" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfNome" layoutX="41.0" layoutY="101.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <PasswordField fx:id="pwSenha" layoutX="41.0" layoutY="328.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <Button fx:id="proximoPasso" layoutX="73.0" layoutY="512.0" mnemonicParsing="false" onAction="#criaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Próximo" textFill="WHITE" />
-                        <Label layoutX="41.0" layoutY="293.0" prefHeight="35.0" prefWidth="69.0" style="-fx-font-family: Lato;" text="Senha" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="mensagemErro" layoutX="36.0" layoutY="462.0" prefHeight="26.0" prefWidth="423.0" style="-fx-font-family: Lato;" textFill="RED">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="41.0" layoutY="140.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="E-mail" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfEmail" layoutX="41.0" layoutY="175.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <Label layoutX="41.0" layoutY="216.0" prefHeight="35.0" prefWidth="207.0" style="-fx-font-family: Lato;" text="Confirmação do E-mail" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfConfirmaEmail" layoutX="41.0" layoutY="251.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <Label layoutX="41.0" layoutY="374.0" prefHeight="35.0" prefWidth="195.0" style="-fx-font-family: Lato;" text="Confirmação da Senha" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <PasswordField fx:id="pwConfirmaSenha" layoutX="41.0" layoutY="409.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                     </children>
-                  </Pane>
-                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="624.0" layoutY="-5.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+                  <Button fx:id="fechar1" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent; -fx-alignment: center;" text="X" textFill="#3e0034">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>

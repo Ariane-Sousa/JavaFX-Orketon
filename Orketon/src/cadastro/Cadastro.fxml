@@ -37,7 +37,7 @@
          <children>
             <AnchorPane fx:id="cadastro" prefHeight="700.0" prefWidth="674.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="624.0" layoutY="-5.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
@@ -56,7 +56,7 @@
                         </Label>
                         <TextField fx:id="tfNome" layoutX="41.0" layoutY="101.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
                         <PasswordField fx:id="pwSenha" layoutX="41.0" layoutY="328.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <Button fx:id="proximoPasso" layoutX="73.0" layoutY="512.0" mnemonicParsing="false" onAction="#criaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Próximo" textFill="WHITE" />
+                        <Button fx:id="proximoPasso" layoutX="73.0" layoutY="512.0" mnemonicParsing="false" onAction="#passosCriaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Próximo" textFill="WHITE" />
                         <Label layoutX="41.0" layoutY="293.0" prefHeight="35.0" prefWidth="69.0" style="-fx-font-family: Lato;" text="Senha" textFill="#574d4d">
                            <font>
                               <Font size="17.0" />
@@ -124,7 +124,7 @@
                         <DatePicker fx:id="dpDataNascimento" layoutX="40.0" layoutY="198.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8;" />
                      </children>
                   </Pane>
-                  <Button fx:id="fechar1" alignment="TOP_RIGHT" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+                  <Button fx:id="fechar1" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent; -fx-alignment: center;" text="X" textFill="#3e0034">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
