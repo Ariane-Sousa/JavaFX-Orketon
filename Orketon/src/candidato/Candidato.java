@@ -1,5 +1,6 @@
 package candidato;
 
+
 import conexao.Conexao;
 
 import java.sql.Connection;
@@ -14,25 +15,25 @@ public class Candidato {
     private Date data_nascimento;
     private String cpf;
     private String telefone;
+    private boolean status = false;
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    private String status = "Deslogado";
-
     public Candidato(){}
-    public Candidato(String nome, String email, String senha, Date data_nascimento, String cpf, String telefone){
+    public Candidato(String nome, String email, String senha, Date data_nascimento, String cpf, String telefone, boolean status){
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.data_nascimento = data_nascimento;
         this.cpf = cpf;
         this.telefone = telefone;
+        this.status = status;
     }
 
     public String getNome() {
@@ -81,6 +82,26 @@ public class Candidato {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void fazLogin(){
+        try {
+            Connection con = Conexao.faz_conexao();
+            String sql = "insert into candidato(nome, email, senha, data_nascimento, cpf, telefone) values (?, ?, ?, ?, ?, ?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, getNome());
+            stmt.setString(2, getEmail());
+            stmt.setString(3, getSenha());
+            stmt.setDate(4, getData_nascimento());
+            stmt.setString(5, getCpf());
+            stmt.setString(6, getTelefone());
+            stmt.execute();
+            stmt.close();
+            con.close();
+            setStatus(true);
+        } catch (SQLException e) {
+            System.out.println("Erro: " + e);
+        }
     }
 
 }
