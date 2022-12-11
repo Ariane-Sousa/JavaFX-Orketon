@@ -2,6 +2,7 @@ package login;
 
 import conexao.Conexao;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -60,6 +61,16 @@ public class FXMLLoginController implements Initializable {
                 System.out.println("Erro:" + e);
             }
         }
+    }
+
+    @FXML
+    private void criarConta(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/cadastro/Cadastro.fxml")));
+        stage.setScene(scene);
+        stage.show();
     }
    
     @Override
