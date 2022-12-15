@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -35,14 +37,60 @@
    <right>
       <AnchorPane fx:id="criaContaPasso1" prefHeight="700.0" prefWidth="740.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="cadastro" prefHeight="700.0" prefWidth="674.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="criaConta" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+                  <Pane layoutX="108.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="144.0" layoutY="50.0" prefHeight="66.0" prefWidth="205.0" style="-fx-font-family: Noto Sans KR;" text="Cadastro" textAlignment="CENTER" textFill="#3e0034">
+                           <font>
+                              <Font name="Serif Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="163.0" prefHeight="35.0" prefWidth="195.0" style="-fx-font-family: Lato;" text="Data da nascimento" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="proximoPasso1" layoutX="73.0" layoutY="450.0" mnemonicParsing="false" onAction="#criaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Criar conta" textFill="WHITE" />
+                        <Label fx:id="mensagemErro1" layoutX="44.0" layoutY="399.0" prefHeight="26.0" prefWidth="413.0" style="-fx-font-family: Lato;" textFill="RED">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="237.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="Cpf" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfCpf" layoutX="40.0" layoutY="272.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <Label layoutX="40.0" layoutY="313.0" prefHeight="35.0" prefWidth="207.0" style="-fx-font-family: Lato;" text="Telefone" textFill="#574d4d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfTelefone" layoutX="40.0" layoutY="348.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
+                        <DatePicker fx:id="dpDataNascimento" layoutX="40.0" layoutY="198.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: transparent; -fx-background-radius: 10;" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="fechar1" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent; -fx-alignment: center;" text="X" textFill="#3e0034">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Pane layoutX="75.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
+                  <Button fx:id="voltar" alignment="CENTER_RIGHT" layoutY="-2.0" mnemonicParsing="false" onAction="#voltar" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="62.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/voltar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="cadastro" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane layoutX="108.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
                      <children>
                         <Label layoutX="165.0" prefHeight="66.0" prefWidth="205.0" style="-fx-font-family: Noto Sans KR;" text="Cadastro" textAlignment="CENTER" textFill="#3e0034">
                            <font>
@@ -87,47 +135,19 @@
                         <PasswordField fx:id="pwConfirmaSenha" layoutX="41.0" layoutY="409.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
                      </children>
                   </Pane>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="criaConta" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: white;">
-               <children>
-                  <Pane layoutX="75.0" layoutY="52.0" prefHeight="595.0" prefWidth="500.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 10;">
-                     <children>
-                        <Label alignment="CENTER" layoutX="144.0" layoutY="50.0" prefHeight="66.0" prefWidth="205.0" style="-fx-font-family: Noto Sans KR;" text="Cadastro" textAlignment="CENTER" textFill="#3e0034">
-                           <font>
-                              <Font name="Serif Bold" size="45.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="40.0" layoutY="163.0" prefHeight="35.0" prefWidth="195.0" style="-fx-font-family: Lato;" text="Data da nascimento" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="proximoPasso1" layoutX="73.0" layoutY="450.0" mnemonicParsing="false" onAction="#criaConta" prefHeight="50.0" prefWidth="355.0" style="-fx-background-color: #3E0034; -fx-border-radius: 10; -fx-font-family: Noto Sans KR; -fx-font-size: 23; -fx-font-weight: normal;" text="Criar conta" textFill="WHITE" />
-                        <Label fx:id="mensagemErro1" layoutX="44.0" layoutY="399.0" prefHeight="26.0" prefWidth="413.0" style="-fx-font-family: Lato;" textFill="RED">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="40.0" layoutY="237.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-family: Lato;" text="Cpf" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfCpf" layoutX="40.0" layoutY="272.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <Label layoutX="40.0" layoutY="313.0" prefHeight="35.0" prefWidth="207.0" style="-fx-font-family: Lato;" text="Telefone" textFill="#574d4d">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfTelefone" layoutX="40.0" layoutY="348.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8; -fx-font-family: Lato; -fx-border-radius: 10; -fx-font-size: 15;" />
-                        <DatePicker fx:id="dpDataNascimento" layoutX="40.0" layoutY="198.0" prefHeight="30.0" prefWidth="420.0" style="-fx-border-color: #3E0034; -fx-background-color: EFE8E8;" />
-                     </children>
-                  </Pane>
-                  <Button fx:id="fechar1" alignment="CENTER" contentDisplay="CENTER" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent; -fx-alignment: center;" text="X" textFill="#3e0034">
+                  <Button fx:id="fechar" alignment="TOP_RIGHT" layoutX="630.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
+                  </Button>
+                  <Button fx:id="voltarLogin" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#voltarLogin" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="62.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/voltar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </AnchorPane>
