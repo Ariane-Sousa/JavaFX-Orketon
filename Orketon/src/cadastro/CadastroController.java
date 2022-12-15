@@ -1,7 +1,6 @@
 package cadastro;
 
 import candidato.Candidato;
-import conexao.Conexao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class CadastroController implements Initializable {
@@ -34,12 +30,27 @@ public class CadastroController implements Initializable {
     @FXML private TextField tfTelefone;
     @FXML private Label mensagemErro1;
     @FXML private Label mensagemErro;
-
-
+    @FXML private Button voltar;
+    @FXML private Button voltarLogin;
 
     @FXML
     private void fechar(ActionEvent event){
         System.exit(0);
+    }
+
+    @FXML
+    private void voltar(ActionEvent event){
+        cadastro.toFront();
+    }
+
+    @FXML
+    private void voltarLogin(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/login/Login.fxml")));
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -85,7 +96,7 @@ public class CadastroController implements Initializable {
                 Dialogs.setHeaderText(null);
                 Dialogs.setContentText("Cadastrado com sucesso. Voltando para a tela de Login!");
                 Dialogs.showAndWait();
-
+                //Abre tela Home
                 Node node = (Node) event.getSource();
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
@@ -94,7 +105,6 @@ public class CadastroController implements Initializable {
                 stage.show();
             }
         }
-
     }
 
     @Override
