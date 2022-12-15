@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="home.HomeController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.HomeController">
+   <left>
+      <VBox prefHeight="700.0" prefWidth="217.0" style="-fx-background-color: #3E0034;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="221.0" style="-fx-background-color: transparent; -fx-font-family: Noto Sans KR; -fx-font-weight: bold; -fx-font-size: 25;" text="Perfil" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="222.0" style="-fx-background-color: transparent; -fx-font-family: Noto Sans KR; -fx-font-weight: bold; -fx-font-size: 30;" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="222.0" style="-fx-background-color: transparent; -fx-font-family: Noto Sans KR; -fx-font-weight: bold; -fx-font-size: 30;" text="Vagas" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="222.0" style="-fx-background-color: transparent; -fx-font-family: Noto Sans KR; -fx-font-weight: bold; -fx-font-size: 30;" text="Status vagas" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="dashboard" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="58.0" layoutY="20.0" prefHeight="642.0" prefWidth="879.0" style="-fx-background-color: EFE8E8; -fx-background-radius: 75;">
+               <children>
+                  <Button layoutX="139.0" layoutY="295.0" mnemonicParsing="false" style="-fx-font-family: Noto Sans KR; -fx-background-color: #3E0034; -fx-font-size: 25; -fx-background-radius: 15;" text="Vagas disponíveis" textFill="WHITE" />
+                  <Button layoutX="519.0" layoutY="295.0" mnemonicParsing="false" style="-fx-font-family: Noto Sans KR; -fx-background-color: #3E0034; -fx-font-size: 25; -fx-background-radius: 15;" text="Vagas candidatadas" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button alignment="TOP_RIGHT" layoutX="929.0" layoutY="-5.0" mnemonicParsing="false" onAction="#fechar" style="-fx-background-color: transparent;" text="X" textFill="#3e0034">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
